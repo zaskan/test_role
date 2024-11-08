@@ -1,0 +1,11 @@
+---
+# tasks file for test_role
+#
+  - name: Set version
+    ansible.builtin.set_fact:
+      fact: "whatever"
+
+  - name: Print version
+    ansible.builtin.debug:
+      msg: "{{ fact }}"
+
