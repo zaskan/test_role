@@ -1,5 +1,12 @@
 ---
 # tasks file for test_role
+<<<<<<< HEAD
+=======
+#
+  - name: Set version
+    ansible.builtin.set_fact:
+      fact: "20241109T183332379092"
+>>>>>>> e48c950b0f18e61aa62764cf7a21ee67a4b4d14f
 
 - name: Set version with job_uuid prefix
   ansible.builtin.set_fact:
@@ -14,3 +21,5 @@
     data:
       "{{ job_uuid }}_execution_timestamp": "{{ hostvars.localhost['{{ job_uuid }}_fact'] }}"
 
+      "\{\{ job_uuid \}\}_fact: "20241109T185737804794"
+      "\{\{ job_uuid \}\}_fact: "20241109T190600827247"
