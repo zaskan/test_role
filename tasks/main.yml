@@ -3,7 +3,7 @@
 #
   - name: Set version
     ansible.builtin.set_fact:
-      d74841d3-7bc8-44d2-8b47-f7f4f8c08adf_fact: 20241109T192207620133
+      xtXKeGOnJcfDXp7uG_fact: 20241109T193908661700
 
   - name: Set version with job_uuid prefix
       ansible.builtin.set_fact:
