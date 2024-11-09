@@ -17,3 +17,4 @@
     ansible.builtin.set_stats:
       data:
       "{{ job_uuid }}_execution_timestamp": "{{ hostvars.localhost['{{ job_uuid }}_fact'] }}"
+      "f5cf58c6-550d-4bc3-a811-8bb96a629c4d_fact: "20241109T191428945965"
