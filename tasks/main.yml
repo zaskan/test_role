@@ -12,6 +12,6 @@
   - name: Set executed timestamp stat
     ansible.builtin.set_stats:
       data:
-        "{{ sync_job_id }}_execution_timestamp": "{{ fact }}"
+        execution_timestamp: "{{ fact }}"
 
 
