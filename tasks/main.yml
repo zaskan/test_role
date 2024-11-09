@@ -9,3 +9,8 @@
     ansible.builtin.debug:
       msg: "{{ fact }}"
 
+  - name: Set executed timestamp stat
+    ansible.builtin.set_stats:
+      data:
+        execution_timestamp: "{{ fact }}"
+
