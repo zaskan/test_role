@@ -3,17 +3,15 @@
 #
   - name: Set version
     ansible.builtin.set_fact:
-      x12036411ae7803efe4346067_fact: 20241109T194309633565
-
-  - name: Set version with job_uuid prefix
-      ansible.builtin.set_fact:
-      "{{ job_uuid }}_fact": "20241109T181754903609"
+      fact: "20241109T181754903609"
 
   - name: Print version
     ansible.builtin.debug:
-      msg: "{{ hostvars.localhost['{{ job_uuid }}_fact'] }}"
+      msg: "{{ fact }}"
 
-  - name: Set executed timestamp stat with job_uuid prefix
+  - name: Set executed timestamp stat
     ansible.builtin.set_stats:
       data:
-      "{{ job_uuid }}_execution_timestamp": "{{ hostvars.localhost['{{ job_uuid }}_fact'] }}"
+        execution_timestamp: "{{ fact }}"
+
+
