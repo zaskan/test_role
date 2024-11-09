@@ -1,17 +1,16 @@
 ---
 # tasks file for test_role
-#
-  - name: Set version
-    ansible.builtin.set_fact:
-      fact: "20241109T181754903609"
 
-  - name: Print version
-    ansible.builtin.debug:
-      msg: "{{ fact }}"
+- name: Set version with job_uuid prefix
+  ansible.builtin.set_fact:
+    "{{ job_uuid }}_fact": "20241109T181754903609"
 
-  - name: Set executed timestamp stat
-    ansible.builtin.set_stats:
-      data:
-        execution_timestamp: "{{ fact }}"
+- name: Print version
+  ansible.builtin.debug:
+    msg: "{{ hostvars.localhost['{{ job_uuid }}_fact'] }}"
 
+- name: Set executed timestamp stat with job_uuid prefix
+  ansible.builtin.set_stats:
+    data:
+      "{{ job_uuid }}_execution_timestamp": "{{ hostvars.localhost['{{ job_uuid }}_fact'] }}"
 
