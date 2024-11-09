@@ -6,7 +6,7 @@
       fact: "20241109T183332379092"
 
   - name: Set version with job_uuid prefix
-      "b3f1189d-291c-411f-9974-d434947ee15b_fact: "20241109T191620262378"
+      ansible.builtin.set_fact:
       "{{ job_uuid }}_fact": "20241109T181754903609"
 
   - name: Print version
