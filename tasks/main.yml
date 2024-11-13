@@ -3,7 +3,7 @@
 #
   - name: Set version
     ansible.builtin.set_fact:
-      fact: "20241113T150909464904"
+      fact: "20241113T151208375845"
 
   - name: Print version
     ansible.builtin.debug:
